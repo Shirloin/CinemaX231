@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:paddingHorizontal="@dimen/gap_small"
+        android:paddingVertical="@dimen/gap_small"
+        android:orientation="vertical"
+
+        android:background="@drawable/rounded_corner_10dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Error"
+            android:textSize="@dimen/font_size_header"
+            android:fontFamily="@font/inria_sans_bold"
+            android:textColor="@color/primary"
+            ></TextView>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/gap_small"
+            ></View>
+        <TextView
+            android:id="@+id/custom_error_dialog_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Error has occured"
+            android:textSize="@dimen/font_size_small"
+            android:fontFamily="@font/inria_sans_bold"
+            android:textColor="@color/black"
+            ></TextView>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/gap_tiny"
+            ></View>
+        <TextView
+            android:id="@+id/custom_error_dialog_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+
+            android:clickable="true"
+
+            android:text="Okay"
+            android:textSize="@dimen/font_size_tiny"
+            android:fontFamily="@font/inria_sans_bold"
+            android:textColor="@color/secondary"
+            ></TextView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

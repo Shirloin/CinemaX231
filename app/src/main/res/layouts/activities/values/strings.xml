@@ -1,0 +1,17 @@
+<resources>
+    <string-array name="censor_ratings">
+        <item>CTC - Unclassified</item>
+        <item>G - General</item>
+        <item>PG - Parental Guidance</item>
+        <item>M - Mature</item>
+        <item>MA 15+ - Mature Accompanied</item>
+        <item>R 18+ - Restricted</item>
+    </string-array>
+    <string-array name="locations">
+        <item>Bluejack 101</item>
+    </string-array>
+    <string name="Dashboard">Dashboard</string>
+    <string name="ManageMovie">Manage Movies</string>
+    <string name="ManageBooking">Manage Bookings</string>
+    <string name="BookingHistories">Booking Histories</string>
+</resources>

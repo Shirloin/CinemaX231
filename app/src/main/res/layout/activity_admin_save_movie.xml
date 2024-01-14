@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin.AdminSaveMovieActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/admin_save_movie_appbar"
+
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <include layout="@layout/app_bar_layout"></include>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <ScrollView
+        app:layout_constraintTop_toBottomOf="@+id/admin_save_movie_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/gap_large"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/admin_save_movie_movieImage"
+                android:layout_width="@dimen/save_movie_image_width"
+                android:layout_height="@dimen/save_movie_image_height"
+
+                android:src="@drawable/dummy_image1"
+                android:background="@color/grey"
+
+                android:elevation="@dimen/small_drop_shadow"
+                ></ImageView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"
+                ></View>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/admin_save_movie_edit_picture_button"
+                android:layout_width="@dimen/save_movie_edit_picture_button_width"
+                android:layout_height="@dimen/save_movie_edit_picture_button_height"
+
+                android:background="@drawable/save_movie_primary_button"
+
+                android:text="Edit Picture"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size_small"
+                android:fontFamily="@font/inria_sans_regular"
+
+                android:padding="0dp"
+                >
+                ></androidx.appcompat.widget.AppCompatButton>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="@dimen/gap_big"
+                android:orientation="vertical"
+
+                android:paddingHorizontal="@dimen/gap_small"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="Movie Title"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/inria_sans_bold"
+                    android:textSize="@dimen/font_size_small"
+                    ></TextView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/save_movie_text_form"
+                    app:boxStrokeWidth="0dp"
+                    >
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/admin_save_movie_movieTitle"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingVertical="0dp"
+
+                        android:background="@drawable/form_full_border"
+                        >
+
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/gap_small"></View>
+
+                <com.google.android.flexbox.FlexboxLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    app:justifyContent="space_between"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        app:layout_flexGrow="1"
+
+                        android:orientation="vertical"
+
+                        android:layout_marginRight="32dp"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Duration"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/inria_sans_bold"
+                            android:textSize="@dimen/font_size_small"
+                            ></TextView>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="@dimen/save_movie_text_form"
+                            app:boxStrokeWidth="0dp"
+                            >
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/admin_save_movie_duration"
+                                android:paddingVertical="0dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:inputType="number"
+                                android:background="@drawable/form_full_border"
+                                >
+
+                            </com.google.android.material.textfield.TextInputEditText>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_flexGrow="1"
+                        android:orientation="vertical"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="Censor Rating"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/inria_sans_bold"
+                            android:textSize="@dimen/font_size_small"
+                            ></TextView>
+
+                        <Spinner
+                            android:id="@+id/admin_save_movie_censorRating"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/save_movie_text_form"
+
+                            android:background="@drawable/form_full_border"
+                            ></Spinner>
+                    </LinearLayout>
+                </com.google.android.flexbox.FlexboxLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/gap_small"
+                    ></View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Genre"
+                        android:textSize="@dimen/font_size_small"
+                        android:fontFamily="@font/inria_sans_bold"
+                        android:textColor="@color/black"
+                        ></TextView>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/save_movie_text_form"
+                        app:boxStrokeWidth="0dp"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/admin_save_movie_genre"
+                            android:paddingVertical="0dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:background="@drawable/form_full_border"
+                            >
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/gap_small"
+                    ></View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Language"
+                        android:textSize="@dimen/font_size_small"
+                        android:fontFamily="@font/inria_sans_bold"
+                        android:textColor="@color/black"
+                        ></TextView>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/save_movie_text_form"
+                        app:boxStrokeWidth="0dp"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/admin_save_movie_Language"
+                            android:paddingVertical="0dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:background="@drawable/form_full_border"
+                            >
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/gap_small"
+                    ></View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Description"
+                        android:textSize="@dimen/font_size_small"
+                        android:fontFamily="@font/inria_sans_bold"
+                        android:textColor="@color/black"
+                        ></TextView>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/save_movie_textfield_form"
+                        app:boxStrokeWidth="0dp"
+                        >
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/admin_save_movie_Description"
+                            android:paddingVertical="@dimen/gap_small"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:background="@drawable/form_full_border"
+                            android:inputType="textMultiLine"
+                            android:gravity="top|left"
+                            >
+
+                        </com.google.android.material.textfield.TextInputEditText>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/gap_small"
+                    ></View>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/admin_save_movie_addSchedule"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Add Schedule"
+                    android:fontFamily="@font/inria_sans_bold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_primary"
+                    >
+                </androidx.appcompat.widget.AppCompatButton>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/gap_small"
+                    ></View>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/admin_save_movie_save"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:text="Save"
+                    android:fontFamily="@font/inria_sans_bold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_secondary"
+                    >
+                </androidx.appcompat.widget.AppCompatButton>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/gap_big"
+                    ></View>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/admin_save_movie_schedule_viewer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:spanCount="1"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/item_schedule_viewer">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/gap_big"
+                    ></View>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

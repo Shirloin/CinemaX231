@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/booking_history_card_height"
+        android:orientation="horizontal"
+        app:alignItems="center"
+        android:paddingHorizontal="@dimen/gap_small"
+        android:paddingVertical="@dimen/gap_small"
+        >
+        <ImageView
+            android:id="@+id/item_booking_history_imageView"
+            android:layout_width="@dimen/manage_bookings_image_width"
+            android:layout_height="@dimen/manage_bookings_image_height"
+            android:src="@drawable/dummy_image1"
+
+            ></ImageView>
+        <View
+            android:layout_width="@dimen/gap_small"
+            android:layout_height="0dp"></View>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/item_booking_history_movieTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/inria_sans_bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_size_tiny"
+                android:text="Sasayaku You ni Koi Wo Utau">
+            </TextView>
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:alignItems="center"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_local_movies_24"
+                    ></ImageView>
+                <TextView
+                    android:id="@+id/item_booking_history_ticket"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/inria_sans_bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_tiny"
+                    android:text="Ticket x2">
+                </TextView>
+            </com.google.android.flexbox.FlexboxLayout>
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:alignItems="center"
+
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_person_grey_24"
+                    ></ImageView>
+                <TextView
+                    android:id="@+id/item_booking_history_username"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:fontFamily="@font/inria_sans_bold"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_size_tiny"
+                    android:text="Dave">
+                </TextView>
+            </com.google.android.flexbox.FlexboxLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="5dp"></View>
+            <TextView
+                android:id="@+id/item_booking_history_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sunday, 25 January 2023"
+                android:textColor="@color/black"
+                android:fontFamily="@font/inria_sans_bold"
+                android:textSize="@dimen/font_size_tiny"
+                ></TextView>
+            <TextView
+                android:id="@+id/item_booking_history_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="asoduhauhsduiahusd18238132"
+                android:textColor="@color/grey"
+                android:fontFamily="@font/inria_sans_bold"
+                android:textSize="@dimen/font_size_tiny"
+                ></TextView>
+        </LinearLayout>
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:flexDirection="column_reverse"
+            app:layout_flexGrow="1"
+            app:alignItems="flex_end">
+            <TextView
+                android:id="@+id/item_booking_history_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Approved"
+                android:fontFamily="@font/inria_sans_bold"
+                android:textSize="@dimen/font_size_tiny"
+                android:textColor="@color/primary"
+                ></TextView>
+        </com.google.android.flexbox.FlexboxLayout>
+    </com.google.android.flexbox.FlexboxLayout>
+
+</androidx.cardview.widget.CardView>

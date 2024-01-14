@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Dashboard">ダッシュボード</string>
+    <string name="ManageMovie">ムービーの管理</string>
+    <string name="ManageBooking">予約の管理</string>
+    <string name="BookingHistories">予約履歴</string>
+</resources>

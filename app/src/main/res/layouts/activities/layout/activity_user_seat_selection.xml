@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".user.UserSeatSelectionActivity">
+
+    <include layout="@layout/app_bar_layout"/>
+
+    <ScrollView
+        android:id="@+id/layout_seat_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appbar"
+        android:layout_above="@+id/seat_bottom_app_bar"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <include layout="@layout/seat_status"/>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/black"
+                android:backgroundTint="@color/black"
+                />
+
+            <LinearLayout
+                android:id="@+id/seatLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+<!--                <dev.jahidhasanco.seatbookview.SeatBookView-->
+<!--                    android:id="@+id/layoutSeat"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:paddingVertical="20dp"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:gravity="center"-->
+<!--                    app:seat_gaping="10dp"-->
+<!--                    app:seat_text_size="18sp"-->
+<!--                    app:available_seats_text_color="@color/white"-->
+<!--                    app:booked_seats_text_color="@color/white"-->
+<!--                    app:reserved_seats_text_color="@color/white"-->
+<!--                    app:available_seat_background="@drawable/seat_available"-->
+<!--                    app:booked_seat_background="@drawable/seat_booked"-->
+<!--                    app:selected_seats_background="@drawable/seat_selected"-->
+<!--                    app:reserved_seat_background="@drawable/seat_reserved"-->
+<!--                    />-->
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/screen"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="SCREEN"
+                android:textSize="20sp"
+                android:textColor="@color/white"
+                android:fontFamily="sans-serif-medium"
+                android:background="@color/black"
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="24dp"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/seat_bottom_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        tools:ignore="BottomAppBar"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1"
+            android:paddingRight="20dp"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Amount :"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium"
+                        />
+                    <TextView
+                        android:id="@+id/seat_total_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total :"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium"
+                        />
+                    <TextView
+                        android:id="@+id/seat_total_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="50,000"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <Button
+                android:id="@+id/seat_book_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="0dp"
+                android:text="Book"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primary"
+                android:padding="12dp"
+                android:gravity="center"
+                />
+        </LinearLayout>
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+</RelativeLayout>

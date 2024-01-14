@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_marginTop="@dimen/gap_big"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:flexDirection="column"
+        app:alignItems="center"
+        android:paddingHorizontal="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/user_profile_profile"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/dummy_image1"></de.hdodenhof.circleimageview.CircleImageView>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/gap_small"
+            ></View>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/user_profile_change_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Change Profile"
+            android:fontFamily="@font/inria_sans_bold"
+            android:background="@drawable/button_primary"
+            android:paddingHorizontal="40dp"
+            android:textColor="@color/white"
+            ></androidx.appcompat.widget.AppCompatButton>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/gap_small"
+            ></View>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textAlignment="textStart"
+            android:textSize="@dimen/font_size_small"
+            android:fontFamily="@font/inria_sans_bold"
+            android:textColor="@color/black"
+            ></TextView>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/save_movie_text_form"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/user_profile_username"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingVertical="0dp"
+
+                android:background="@drawable/form_bottom_border"
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/gap_small"
+            ></View>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/user_profile_change_username"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Change Username"
+            android:fontFamily="@font/inria_sans_bold"
+            android:background="@drawable/button_primary"
+            android:paddingHorizontal="40dp"
+            android:textColor="@color/white"
+            ></androidx.appcompat.widget.AppCompatButton>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/gap_small"
+            ></View>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/user_profile_change_password"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Change Password"
+            android:fontFamily="@font/inria_sans_bold"
+            android:background="@drawable/button_primary"
+            android:paddingHorizontal="40dp"
+            android:textColor="@color/white"
+            ></androidx.appcompat.widget.AppCompatButton>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:textAlignment="textStart"
+            android:textSize="@dimen/font_size_small"
+            android:fontFamily="@font/inria_sans_bold"
+            android:textColor="@color/black"
+            ></TextView>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/save_movie_text_form"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/user_profile_phone"
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingVertical="0dp"
+
+                android:background="@drawable/form_bottom_border"
+                >
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/gap_small"
+            ></View>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/user_profile_change_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Change Phone"
+            android:fontFamily="@font/inria_sans_bold"
+            android:background="@drawable/button_primary"
+            android:paddingHorizontal="40dp"
+            android:textColor="@color/white"
+            ></androidx.appcompat.widget.AppCompatButton>
+    </com.google.android.flexbox.FlexboxLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/gap_large"
+        ></View>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:text="Logout"
+        android:background="@drawable/button_primary"
+        android:textColor="@color/white"
+        android:paddingHorizontal="40dp"
+        android:id="@+id/user_profile_logout"
+        ></androidx.appcompat.widget.AppCompatButton>
+
+</LinearLayout>

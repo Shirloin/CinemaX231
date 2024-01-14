@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    General - Font -->
+    <dimen name="font_size_page_title">30sp</dimen>
+    <dimen name="font_size_header">24sp</dimen>
+    <dimen name="font_size_small">14sp</dimen>
+    <dimen name="font_size_tiny">12sp</dimen>
+
+<!--    General - Shadow-->
+    <dimen name="small_drop_shadow">10dp</dimen>
+    <dimen name="big_drop_shadow">20dp</dimen>
+
+<!--    General Gap-->
+    <dimen name="gap_tiny">2dp</dimen>
+    <dimen name="gap_small">10dp</dimen>
+    <dimen name="gap_big">30dp</dimen>
+    <dimen name="gap_large">70dp</dimen>
+
+<!--    General Sizes-->
+    <dimen name="search_bar_height">41dp</dimen>
+
+<!--    admin dashboard -->
+    <dimen name="admin_dashboard_gap">68dp</dimen>
+    <dimen name="admin_dashboard_height">194dp</dimen>
+    <dimen name="admin_dashboard_width">289dp</dimen>
+    <dimen name="admin_dashboard_image_width">128dp</dimen>
+    <dimen name="admin_dashboard_font_size">14sp</dimen>
+
+<!--    Movie Viewer -->
+    <dimen name="movie_viewer_image_width">79dp</dimen>
+    <dimen name="movie_viewer_image_height">105dp</dimen>
+    <dimen name="movie_viewer_container_height">150dp</dimen>
+    <dimen name="movie_viewer_container_hPadding">9dp</dimen>
+    <dimen name="movie_viewer_container_vPadding">25dp</dimen>
+    <dimen name="movie_viewer_button_size">70dp</dimen>
+    <dimen name="movie_viewer_button_margin">10dp</dimen>
+
+<!--        Fragment - Movie Viewer-->
+        <dimen name="movie_viewer_fragment_hGap">6dp</dimen>
+        <dimen name="movie_viewer_button_width">91dp</dimen>
+        <dimen name="movie_viewer_button_height">31dp</dimen>
+        <dimen name="movie_viewer_logo_size">24dp</dimen>
+
+<!--    Save Movie-->
+    <dimen name="save_movie_image_width">178dp</dimen>
+    <dimen name="save_movie_image_height">316.44dp</dimen>
+    <dimen name="save_movie_edit_picture_button_width">178dp</dimen>
+    <dimen name="save_movie_edit_picture_button_height">32dp</dimen>
+    <dimen name="save_movie_text_form">28dp</dimen>
+    <dimen name="save_movie_textfield_form">100dp</dimen>
+    <dimen name="save_movie_dialog_form">34dp</dimen>
+
+<!--    Booking History-->
+    <dimen name="booking_history_card_height">120dp</dimen>
+
+<!--    Manage Bookings-->
+    <dimen name="manage_bookings_card_height">154dp</dimen>
+    <dimen name="manage_bookings_image_width">79dp</dimen>
+    <dimen name="manage_bookings_image_height">105dp</dimen>
+    <dimen name="manage_bookings_button_width">92dp</dimen>
+    <dimen name="manage_bookings_button_height">25dp</dimen>
+
+</resources>

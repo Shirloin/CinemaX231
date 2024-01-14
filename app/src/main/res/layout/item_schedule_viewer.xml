@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:elevation="10dp"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        >
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:justifyContent="space_between"
+            >
+            <TextView
+                android:id="@+id/item_schedule_viewer_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inria_sans_bold"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/font_size_small"
+                android:text="Monday, 6 October 2023"
+                ></TextView>
+            <TextView
+                android:id="@+id/item_movie_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inria_sans_bold"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/font_size_small"
+                android:text="Rp. 60, 000"></TextView>
+        </com.google.android.flexbox.FlexboxLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/gap_small"
+            ></View>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/item_schedule_rcv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            tools:listitem="@layout/item_movie_schedule"
+            tools:itemCount="5"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

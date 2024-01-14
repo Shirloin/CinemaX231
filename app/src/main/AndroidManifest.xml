@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="CinemaX231"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Tpa_mobile"
+        tools:targetApi="31">
+        <activity
+            android:name=".user.UserTransactionDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="edu.bluejack_231.cinemax231.admin.ManageBookingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.UserSeatSelectionActivity"
+            android:exported="false"
+            android:parentActivityName=".user.UserMovieTimeSelectionActivity" />
+        <activity
+            android:name=".user.UserMovieTimeSelectionActivity"
+            android:exported="false"
+            android:parentActivityName=".user.UserMovieDetailActivity" />
+        <activity
+            android:name="edu.bluejack_231.cinemax231.admin.BookingHistoryActivity"
+            android:exported="false" />
+        <activity
+            android:name="edu.bluejack_231.cinemax231.auth.ForgotPasswordActivity"
+            android:exported="false"
+            android:parentActivityName="edu.bluejack_231.cinemax231.auth.LoginActivity" />
+        <activity
+            android:name="edu.bluejack_231.cinemax231.admin.AdminSaveMovieActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.UserMovieDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="edu.bluejack_231.cinemax231.admin.MovieViewerActivity"
+            android:exported="false" />
+        <activity
+            android:name="edu.bluejack_231.cinemax231.admin.AdminDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name="edu.bluejack_231.cinemax231.utility.BaseActivity"
+            android:exported="false" />
+        <activity
+            android:name=".user.UserNavigationActivity"
+            android:exported="false" />
+        <activity
+            android:name="edu.bluejack_231.cinemax231.auth.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name="edu.bluejack_231.cinemax231.auth.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name="edu.bluejack_231.cinemax231.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name=".utility.service.NotificationService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

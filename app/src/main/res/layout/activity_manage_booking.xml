@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.bluejack_231.cinemax231.admin.ManageBookingActivity">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/manage_booking_appbar"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/app_bar_layout"></include>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <LinearLayout
+        android:id="@+id/manage_booking_top"
+        app:layout_constraintTop_toBottomOf="@id/manage_booking_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/gap_small"
+            ></View>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/gap_small"
+            app:boxStrokeWidth="0dp"
+            >
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/manage_booking_search"
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/search_bar_height"
+
+                android:background="@drawable/search_bar"
+                android:padding="0dp"
+                >
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="@dimen/gap_small"
+            ></View>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/manage_booking_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_manage_booking"
+            android:paddingBottom="80dp">
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

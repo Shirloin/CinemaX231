@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/movie_viewer_container_height"
+
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/movie_viewer_container_hPadding"
+        android:paddingVertical="@dimen/movie_viewer_container_vPadding"
+        >
+        <ImageView
+            android:id="@+id/item_movie_viewer_imageView"
+            android:layout_width="@dimen/movie_viewer_image_width"
+            android:layout_height="@dimen/movie_viewer_image_height"
+            android:src="@drawable/dummy_image1"
+            android:background="@drawable/rounded_corner_20dp"
+            ></ImageView>
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/movie_viewer_fragment_hGap"
+            >
+            <TextView
+                android:id="@+id/item_movie_viewer_movieTitle"
+                android:layout_alignParentTop="true"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/inria_sans_bold"
+                android:textSize="@dimen/font_size_header"
+                android:text="Sasayaku you ni Koi wo Utau"
+                android:textColor="@color/black"
+                ></TextView>
+
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+
+                android:gravity="end"
+                >
+
+                <LinearLayout
+                    android:id="@+id/item_movie_viewer_deleteButton"
+                    android:layout_width="@dimen/movie_viewer_button_width"
+                    android:layout_height="@dimen/movie_viewer_button_height"
+
+                    android:background="@drawable/button_danger"
+
+                    android:gravity="center"
+                    android:clickable="false"
+                    >
+                    <ImageView
+                        android:layout_width="@dimen/movie_viewer_logo_size"
+                        android:layout_height="@dimen/movie_viewer_logo_size"
+
+                        android:src="@drawable/baseline_delete_white_24"
+                        ></ImageView>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="0dp"
+                    ></View>
+
+                <LinearLayout
+                    android:id="@+id/item_movie_viewer_editButton"
+                    android:layout_width="@dimen/movie_viewer_button_width"
+                    android:layout_height="@dimen/movie_viewer_button_height"
+
+                    android:background="@drawable/button_safe"
+
+                    android:gravity="center"
+                    android:clickable="false"
+                    >
+                    <ImageView
+                        android:layout_width="@dimen/movie_viewer_logo_size"
+                        android:layout_height="@dimen/movie_viewer_logo_size"
+
+                        android:src="@drawable/baseline_mode_edit_24"
+                        ></ImageView>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

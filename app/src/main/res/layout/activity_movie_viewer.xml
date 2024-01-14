@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.bluejack_231.cinemax231.admin.MovieViewerActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/movie_viewer_appbar"
+
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <include layout="@layout/app_bar_layout"></include>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintTop_toBottomOf="@id/movie_viewer_appbar"
+
+        android:id="@+id/admin_movie_viewer_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_movie_viewer"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:spanCount="1"
+        android:paddingBottom="50dp"
+        ></androidx.recyclerview.widget.RecyclerView>
+
+    <ImageButton
+        android:id="@+id/admin_movie_viewer_create_movie"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        android:layout_marginRight="@dimen/movie_viewer_button_margin"
+        android:layout_marginBottom="@dimen/movie_viewer_button_margin"
+
+        android:layout_width="@dimen/movie_viewer_button_size"
+        android:layout_height="@dimen/movie_viewer_button_size"
+        android:background="@drawable/movie_viewer_button_circle"
+
+        android:src="@drawable/baseline_note_add_24"
+        >
+    </ImageButton>
+</androidx.constraintlayout.widget.ConstraintLayout>
